@@ -168,3 +168,8 @@
 .flex-between {
   @apply flex justify-between items-center;
 }
+
+
+.dropdown_lg {
+  @apply absolute right-0 top-16 p-5 rounded-lg min-w-[210px] flex flex-col gap-2 justify-end items-start; 
+}
