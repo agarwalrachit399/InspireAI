@@ -35,7 +35,7 @@ const Home = () => {
 
             <Feed/>
 
-            {/* <p className='desc text-center mb-4'>Created by Yashh Jaggi</p> */}
+            <p className='desc text-center mb-4'>Created by <a href="https://github.com/yashhjaggi1998/" target='blank'><strong>Yashh Jaggi</strong></a></p> 
     </section>
   )
 }
