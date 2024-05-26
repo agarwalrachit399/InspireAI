@@ -83,7 +83,13 @@ const Nav = () => {
                 <button
                 type='button'
                 key = {provider.name}
-                onClick={()=> signIn(provider.id)}
+                onClick={(e)=> 
+                  {
+                    e.preventDefault()
+                    signIn(provider.id)
+                  }
+                  
+                }
                 className='black_btn'>
                   Sign In
                 </button>
