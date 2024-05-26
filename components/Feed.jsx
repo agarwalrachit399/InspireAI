@@ -7,6 +7,7 @@ import PromptCard from "./PromptCard";
 const Feed = () => {
 
   const PromptCardList = ({ data, handleTagClick }) => {
+    console.log(data)
     return (
       <div className='mt-16 prompt_layout'>
         {data.map((post) => (
