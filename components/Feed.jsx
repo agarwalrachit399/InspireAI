@@ -34,7 +34,7 @@ const Feed = () => {
     console.log("Prompts",data)
     setAllPosts(data);
   };
-  
+
   useEffect(() => {
     fetchPosts();
   }, []);
@@ -43,7 +43,7 @@ const Feed = () => {
     const regex = new RegExp(searchtext, "i"); // 'i' flag for case-insensitive search
     return allPosts.filter(
       (item) =>
-        regex.test(item.creator.username) ||
+        regex.test(item.creator?.username) ||
         regex.test(item.tag) ||
         regex.test(item.prompt)
     );
