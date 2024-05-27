@@ -21,7 +21,7 @@ const Home = () => {
         <h1 className="head_text text-center">
         Unleash Your Creativity with 
             <br className="max-md:hidden" />
-            <span className="blue_gradient1 text-center">
+            <span className="blue_gradient_main text-center">
                 AI Powered Prompts</span>
             </h1>
             <p className="desc text-center">
@@ -35,7 +35,7 @@ const Home = () => {
 
             <Feed/>
 
-            <p className='desc text-center mb-4'>Created by <a href="https://github.com/yashhjaggi1998/" target='blank'><strong>Yashh Jaggi</strong></a></p> 
+            <p className='desc text-center mb-4'>Created by <a href="https://github.com/agarwalrachit399/" target='blank'><strong>Rachit Agarwal</strong></a></p> 
     </section>
   )
 }

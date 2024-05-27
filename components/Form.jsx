@@ -34,7 +34,7 @@ const Form = ({type,post,setPost,submitting,handleSubmit}) => {
         <label>
           <span className="font-satoshi font-semibold text-base text-gray-700">
             Tag {` `}
-            <span className="font-normal">(#product, #webdev, #llm)</span>
+            <span className="font-normal">(#Product, #WedDev, #LLM)</span>
           </span>
           <input 
           value={post.tag}

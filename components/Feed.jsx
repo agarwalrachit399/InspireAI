@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import PromptCard from "./PromptCard";
+import Loading from "./loading";
 
 const Feed = () => {
 
@@ -26,12 +27,14 @@ const Feed = () => {
   const [searchText, setSearchText] = useState("");
   const [searchTimeout, setSearchTimeout] = useState(null);
   const [searchedResults, setSearchedResults] = useState([]);
+  const [loading, setLoading] = useState(true);
 
 
   const fetchPosts = async () => {
     const response = await fetch("/api/prompt");
     const data = await response.json();
     setAllPosts(data);
+    setLoading(false);
   };
 
   useEffect(() => {
@@ -72,6 +75,9 @@ const Feed = () => {
     setSearchText('');
   };
 
+  if (loading) {
+    return <Loading/>
+  }
 
   return (
     <section className='feed'>
@@ -83,12 +89,12 @@ const Feed = () => {
           value={searchText}
           onChange={handleSearchChange}
           required
-          className="w-11/12"
+          className="w-11/12 focus:outline-none"
         />
         {searchText && (
         <button onClick={handleClearClick}>
            <Image 
-        src='/assets/images/cross.png'
+        src='/assets/icons/cross.svg'
         alt='cancel-button'
         width={20}
         height={20}

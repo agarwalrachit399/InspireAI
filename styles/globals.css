@@ -4,9 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* 
-  Note: The styles for this gradient grid background is heavily inspired by the creator of this amazing site (https://dub.sh) – all credits go to them! 
-*/
 
 .main {
   width: 100vw;
@@ -89,13 +86,10 @@
   @apply mt-5 text-5xl font-extrabold leading-[1.15] text-black sm:text-6xl;
 }
 
-.blue_gradient1 {
+.blue_gradient_main {
   @apply bg-gradient-to-r from-blue-700 via-sky-600 to-cyan-500 bg-clip-text text-transparent;
 }
 
-.green_gradient {
-  @apply bg-gradient-to-r from-green-400 to-green-500 bg-clip-text text-transparent;
-}
 
 .blue_gradient {
   @apply bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent;
@@ -147,7 +141,9 @@
 .dropdown_link {
   @apply text-sm font-inter text-gray-700 hover:text-gray-500 font-medium;
 }
-
+.dropdown_lg {
+  @apply absolute right-0 top-16 p-5 rounded-lg min-w-[210px] flex flex-col gap-2 justify-end items-start; 
+}
 /* PromptCard Component */
 .prompt_card {
   @apply flex-1 break-inside-avoid rounded-lg border border-gray-300 bg-white/20 bg-clip-padding p-6 pb-4 backdrop-blur-lg backdrop-filter md:w-[360px] w-full h-fit;
@@ -170,6 +166,3 @@
 }
 
 
-.dropdown_lg {
-  @apply absolute right-0 top-16 p-5 rounded-lg min-w-[210px] flex flex-col gap-2 justify-end items-start; 
-}

@@ -28,11 +28,12 @@ const Nav = () => {
     <nav className='flex-between w-full mb-16 pt-3'>
       <Link href='/' className='flex gap-2 flex-center'>
         <Image 
-        src='/assets/images/chat-bot.gif'
+        src='/assets/images/logo.gif'
         alt='Logo'
-        width={45}
-        height={45}
+        width={55}
+        height={55}
         className='object-contain'
+        unoptimized = {true}
         />
         <p className='logo_text'>Inspire AI</p>
       </Link>
@@ -52,7 +53,7 @@ const Nav = () => {
               alt='profile'
               width={37}
               height={37}
-              className='rounded-full'
+              className='rounded-full cursor-pointer'
               onClick={()=> setToggleDropdown((prev)=>!prev)}/>
             
 
@@ -103,20 +104,27 @@ const Nav = () => {
       <div className='sm:hidden flex relative'>
         {session?.user ? (
           <div className='flex'>
-             <Image src='/assets/images/logo.svg'
+             <Image src={session?.user?.image}
               alt='profile'
               width={37}
               height={37}
-              className='rounded-full'
+              className='rounded-full cursor-pointer'
               onClick={()=> setToggleDropdown((prev)=>!prev)}/>
 
             {toggleDropdown && (
               <div className='dropdown'>
                 <Link 
+                className='dropdown_link'
+                href="/edit-profile"
+                onClick={()=> setToggleDropdown(false)}>
+                  Edit Profile
+                </Link>
+
+                <Link 
                 href="/profile"
                 className='dropdown_link'
                 onClick={()=> setToggleDropdown(false)}>
-                  My Profile
+                  Mange your Prompts
                 </Link>
 
                 <Link 
@@ -132,7 +140,7 @@ const Nav = () => {
                   setToggleDropdown(false);
                   signOut();
                 }}
-                className='mt-5 w-full black_btn'>
+                className='w-full black_btn'>
                   Sign Out
                 </button>
 
