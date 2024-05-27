@@ -48,7 +48,7 @@ const Nav = () => {
               Sign Out
             </button>
 
-              <Image src={session?.user.image}
+              <Image src={session?.user?.image}
               alt='profile'
               width={37}
               height={37}
