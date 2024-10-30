@@ -11,3 +11,4 @@ export const GET = async (request) => {
         return new Response("Failed to fetch all Prompts", {status:500})
     }
 }
+
